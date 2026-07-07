@@ -1,0 +1,19 @@
+# React 30-Day Journey
+
+Daily React learning log — following TAP Academy's React course, with additional
+topics (Router, Redux Toolkit, TanStack Query, Auth) covered after.
+
+## Structure
+- Each folder is organized by **topic/project**, not by day number, since some
+  topics (like the TechStore project) span multiple days.
+- `notes/` contains daily learning notes — what was covered, what was built,
+  and one thing I'd want to be able to explain in an interview.
+
+## Progress
+
+| Folder | Topic | Status |
+|---|---|---|
+| `01-jsx-basics` | React setup, JSX rules | ✅ In progress |
+
+## Notes
+Daily notes are in [`notes/`](./notes), one file per day (`day-01.md`, `day-02.md`, ...).
