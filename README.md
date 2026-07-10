@@ -13,7 +13,8 @@ topics (Router, Redux Toolkit, TanStack Query, Auth) covered after.
 
 | Folder | Topic | Status |
 |---|---|---|
-| `01-jsx-basics` | React setup, JSX rules | ✅ In progress |
+| `01-jsx-basics` | React setup, JSX rules | ✅ Done |
+| `02-jsx-rules` | JSX deep dive, embedding expressions | ✅ Done |
 
 ## Notes
 Daily notes are in [`notes/`](./notes), one file per day (`day-01.md`, `day-02.md`, ...).
