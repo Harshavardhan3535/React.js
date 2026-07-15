@@ -18,7 +18,7 @@ topics (Router, Redux Toolkit, TanStack Query, Auth) covered after.
 | `03-components` | Components as functions, building blocks of React | ✅ Done |
 | `04-reusable-components` | Reusable/nested components, modules (export/import) | ✅ Done |
 | `05-props` | Props (passing data), named vs default exports | ✅ Done |
-| `06-props-destructuring` | Array/object destructuring, aliasing, nested destructuring | ✅ Done |
+| `06-props-destructuring` | Array & object destructuring, aliasing, nested destructuring | ✅ Done |
 
 ## Notes
 Daily notes are in [`notes/`](./notes), one file per day (`day-01.md`, `day-02.md`, ...).
