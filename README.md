@@ -20,7 +20,7 @@ topics (Router, Redux Toolkit, TanStack Query, Auth) covered after.
 | `05-props` | Props (passing data), named vs default exports | ✅ Done |
 | `06-props-destructuring` | Array & object destructuring, aliasing, nested destructuring | ✅ Done |
 | `07-conditional-rendering` | Default props, children prop, conditional rendering, deployment basics | ✅ Done |
-| 
+| `08-rendering-arrays` | Rendering lists with .map(), key prop rules | ✅ Done |
 
 ## Notes
 Daily notes are in [`notes/`](./notes), one file per day (`day-01.md`, `day-02.md`, ...).
