@@ -22,7 +22,7 @@ topics (Router, Redux Toolkit, TanStack Query, Auth) covered after.
 | `07-conditional-rendering` | Default props, children prop, conditional rendering, deployment basics | ✅ Done |
 | `08-rendering-arrays` | Rendering lists with .map(), key prop rules | ✅ Done |
 | `09-state` | useState introduction, counter component, functional updater | ✅ Done |
-| `10-useState` | useState introduction, counter component, functional updater | ✅ Done |
+| `10-useState` | useState introduction, controlled component, functional updater | ✅ Done |
 
 ## Notes
 Daily notes are in [`notes/`](./notes), one file per day (`day-01.md`, `day-02.md`, ...).
