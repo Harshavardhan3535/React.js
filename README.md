@@ -18,11 +18,12 @@ topics (Router, Redux Toolkit, TanStack Query, Auth) covered after.
 | `03-components` | Components as functions, building blocks of React | ✅ Done |
 | `04-reusable-components` | Reusable/nested components, modules (export/import) | ✅ Done |
 | `05-props` | Props (passing data), named vs default exports | ✅ Done |
-| `06-props-destructuring` | Array & object destructuring, aliasing, nested destructuring | ✅ Done |
+| `06-props-destructuring` | Array/object destructuring, aliasing, nested destructuring | ✅ Done |
 | `07-conditional-rendering` | Default props, children prop, conditional rendering, deployment basics | ✅ Done |
 | `08-rendering-arrays` | Rendering lists with .map(), key prop rules | ✅ Done |
 | `09-state` | useState introduction, counter component, functional updater | ✅ Done |
 | `10-controlled-components` | Rules of Hooks, controlled form inputs, UserForm assignment | ✅ Done |
+| `11-13-techstore-project` | TechStore project — controlled components, state, spread operator | 🔄 In Progress (Day 11/13) |
 
 ## Notes
 Daily notes are in [`notes/`](./notes), one file per day (`day-01.md`, `day-02.md`, ...).
