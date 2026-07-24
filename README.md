@@ -23,7 +23,7 @@ topics (Router, Redux Toolkit, TanStack Query, Auth) covered after.
 | `08-rendering-arrays` | Rendering lists with .map(), key prop rules | ✅ Done |
 | `09-state` | useState introduction, counter component, functional updater | ✅ Done |
 | `10-controlled-components` | Rules of Hooks, controlled form inputs, UserForm assignment | ✅ Done |
-| `11-13-techstore-project` | TechStore project — controlled components, state, spread operator | 🔄 In Progress (Day 11/13) |
+| `11-13-techstore-project` | TechStore project — controlled components, state, cart logic, dark mode | 🔄 In Progress (Day 13, functionality finishing) |
 
 ## Notes
 Daily notes are in [`notes/`](./notes), one file per day (`day-01.md`, `day-02.md`, ...).
