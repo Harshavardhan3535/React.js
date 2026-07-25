@@ -24,6 +24,7 @@ topics (Router, Redux Toolkit, TanStack Query, Auth) covered after.
 | `09-state` | useState introduction, counter component, functional updater | ✅ Done |
 | `10-controlled-components` | Rules of Hooks, controlled form inputs, UserForm assignment | ✅ Done |
 | `11-13-techstore-project` | TechStore project — controlled components, state, cart logic, dark mode | 🔄 In Progress (Day 13, functionality finishing) |
+| `14-useeffect-localstorage` | useEffect basics, dependency array, localStorage persistence | ✅ Done |
 
 ## Notes
 Daily notes are in [`notes/`](./notes), one file per day (`day-01.md`, `day-02.md`, ...).
