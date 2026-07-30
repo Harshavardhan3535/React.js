@@ -28,6 +28,7 @@ topics (Router, Redux Toolkit, TanStack Query, Auth) covered after.
 | `15-localstorage-nodejs` | localStorage concept, JSON.stringify/parse for object storage | ✅ Done |
 | `16-useeffect-cleanup` | useEffect cleanup function, Persistence Counter + Timer mini projects | ✅ Done |
 | `17-cart-persistence` | Cart persistence pattern (localStorage + JSON), Timer bug fix continued | ✅ Done |
+| `18-fetch-api` | Fetch API with async/await, loading/error/success states | ✅ Done |
 
 ## Notes
 Daily notes are in [`notes/`](./notes), one file per day (`day-01.md`, `day-02.md`, ...).
