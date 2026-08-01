@@ -23,13 +23,13 @@ topics (Router, Redux Toolkit, TanStack Query, Auth) covered after.
 | `08-rendering-arrays` | Rendering lists with .map(), key prop rules | ✅ Done |
 | `09-state` | useState introduction, counter component, functional updater | ✅ Done |
 | `10-controlled-components` | Rules of Hooks, controlled form inputs, UserForm assignment | ✅ Done |
-| `11-13-techstore-project` | TechStore project — controlled components, state, cart logic, dark mode | 🔄 In Progress (Day 13, functionality finishing) |
+| `11-13-techstore-project` | TechStore project — controlled components, state, cart logic, dark mode | 🔄 In Progress (paused, resuming later) |
 | `14-useeffect-localstorage` | useEffect basics, dependency array, localStorage persistence | ✅ Done |
 | `15-localstorage-nodejs` | localStorage concept, JSON.stringify/parse for object storage | ✅ Done |
 | `16-useeffect-cleanup` | useEffect cleanup function, Persistence Counter + Timer mini projects | ✅ Done |
 | `17-cart-persistence` | Cart persistence pattern (localStorage + JSON), Timer bug fix continued | ✅ Done |
 | `18-fetch-api` | Fetch API with async/await, loading/error/success states | ✅ Done |
-| `19-fetch-continuation-useref` | Fetch API status codes, useRef hook, LoginForm focus example | ✅ Done |
+| `19-fetch-continuation-useref` | Fetch API continuation (status codes) + useRef hook (DOM access, scrollIntoView) | ✅ Done |
 
 ## Notes
 Daily notes are in [`notes/`](./notes), one file per day (`day-01.md`, `day-02.md`, ...).
