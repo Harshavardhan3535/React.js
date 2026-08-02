@@ -9,6 +9,10 @@ topics (Router, Redux Toolkit, TanStack Query, Auth) covered after.
 - `notes/` contains daily learning notes — what was covered, what was built,
   and one thing I'd want to be able to explain in an interview.
 
+## Milestones
+- ✅ **Days 1-20**: TAP Academy React syllabus complete
+- 🔄 Days 21-30: Gap topics (React Router, Forms, Redux Toolkit, TanStack Query, Authentication, Performance)
+
 ## Progress
 
 | Folder | Topic | Status |
