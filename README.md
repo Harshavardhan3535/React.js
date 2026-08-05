@@ -36,6 +36,7 @@ topics (Router, Redux Toolkit, TanStack Query, Auth) covered after.
 | `19-fetch-continuation-useref` | Fetch API continuation (status codes) + useRef hook (DOM access, scrollIntoView) | ✅ Done |
 | `20-context-api` | Prop drilling problem, Context API (createContext/useContext) | ✅ Done |
 | `21-react-router-basics` | React Router — Routes, Link/NavLink, nested routes, dynamic params, useSearchParams | ✅ Done |
+| `22-router-navigation-protected` | useParams, useNavigate, URL params as state (Protected Routes pending) | 🔄 In Progress |
 
 ## Notes
 Daily notes are in [`notes/`](./notes), one file per day (`day-01.md`, `day-02.md`, ...).
