@@ -34,11 +34,14 @@ login succeeds, redirecting when unauthorized.
 ## What I built in practice
 - Watched multiple tutorials on useParams and useNavigate across
   different examples to build a broader mental model of each hook
-- Did not yet build Protected Routes — planned for a follow-up session,
-  will connect directly to Day 29's Authentication work
+- Built all three pieces hands-on: a component reading `id` via
+  useParams, a login button redirecting via useNavigate, and a
+  ProtectedRoute wrapper (hardcoded isAuthenticated boolean) guarding
+  a Dashboard route — confirmed it redirects to /login when false and
+  renders when true
 
 ## One thing I'd get wrong in an interview
 Thinking Protected Routes ARE authentication — they're not. The Protected
 Route component is just a conditional redirect wrapper; the actual
 "is this user really authenticated" logic (checking a token, calling an
-API) is separate and gets plugged into the same wrapper later.
+API) is separate and gets plugged into the same wrapper on Day 29.
