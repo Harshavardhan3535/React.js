@@ -40,6 +40,7 @@ topics (Router, Redux Toolkit, TanStack Query, Auth) covered after.
 | `23-forms-validation` | Multi-field controlled forms, validation, error handling | ✅ Done |
 | `24-react-hook-form` | React Hook Form (register, validation rules) vs hand-built useState form | ✅ Done |
 | `25-axios-api-integration` | Axios (instances, interceptors), AbortController/race conditions, full CRUD example | ✅ Done |
+| `26-redux-toolkit-basics` | Redux Toolkit — slices, store, useSelector/dispatch, multi-slice app | ✅ Done |
 
 ## Notes
 Daily notes are in [`notes/`](./notes), one file per day (`day-01.md`, `day-02.md`, ...).
