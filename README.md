@@ -11,7 +11,8 @@ topics (Router, Redux Toolkit, TanStack Query, Auth) covered after.
 
 ## Milestones
 - ✅ **Days 1-20**: TAP Academy React syllabus complete
-- 🔄 Days 21-30: Gap topics (React Router, Forms, Redux Toolkit, TanStack Query, Authentication, Performance)
+- ✅ **Days 21-30**: Gap topics complete (React Router, Forms, Redux Toolkit, TanStack Query, Authentication, Performance)
+- 🔄 **Cleanup session (pending)**: Finish TechStore (Days 11-13), verify/rebuild Day 22 Protected Routes practice, build Day 29 Auth practice against real API, general Days 1-20 bug sweep
 
 ## Progress
 
@@ -44,6 +45,7 @@ topics (Router, Redux Toolkit, TanStack Query, Auth) covered after.
 | `27-redux-async-thunks` | createAsyncThunk, full CRUD app (Create/Read/Update/Delete + search/filter) | ✅ Done |
 | `28-tanstack-query` | TanStack Query — useQuery, useMutation, invalidation, pagination basics | ✅ Done |
 | `29-authentication` | JWT auth concept (access/refresh tokens), AuthContext reference code fixed | 🔄 Concept done, practice build pending cleanup session |
+| `30-performance` | React.memo, useMemo, useCallback, React DevTools Profiler | ✅ Done |
 
 ## Notes
 Daily notes are in [`notes/`](./notes), one file per day (`day-01.md`, `day-02.md`, ...).
