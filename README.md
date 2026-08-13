@@ -43,6 +43,7 @@ topics (Router, Redux Toolkit, TanStack Query, Auth) covered after.
 | `26-redux-toolkit-basics` | Redux Toolkit — slices, store, useSelector/dispatch, multi-slice app | ✅ Done |
 | `27-redux-async-thunks` | createAsyncThunk, full CRUD app (Create/Read/Update/Delete + search/filter) | ✅ Done |
 | `28-tanstack-query` | TanStack Query — useQuery, useMutation, invalidation, pagination basics | ✅ Done |
+| `29-authentication` | JWT auth concept (access/refresh tokens), AuthContext reference code fixed | 🔄 Concept done, practice build pending cleanup session |
 
 ## Notes
 Daily notes are in [`notes/`](./notes), one file per day (`day-01.md`, `day-02.md`, ...).
