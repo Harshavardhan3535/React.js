@@ -28,7 +28,7 @@ topics (Router, Redux Toolkit, TanStack Query, Auth) covered after.
 | `08-rendering-arrays` | Rendering lists with .map(), key prop rules | ✅ Done |
 | `09-state` | useState introduction, counter component, functional updater | ✅ Done |
 | `10-controlled-components` | Rules of Hooks, controlled form inputs, UserForm assignment | ✅ Done |
-| `11-13-techstore-project` | TechStore project — controlled components, state, cart logic, dark mode | 🔄 In Progress (paused, resuming later) |
+| `11-13-techstore-project` | TechStore — product grid, cart + wishlist with localStorage persistence, search/brand/sort filtering | ✅ Done |
 | `14-useeffect-localstorage` | useEffect basics, dependency array, localStorage persistence | ✅ Done |
 | `15-localstorage-nodejs` | localStorage concept, JSON.stringify/parse for object storage | ✅ Done |
 | `16-useeffect-cleanup` | useEffect cleanup function, Persistence Counter + Timer mini projects | ✅ Done |
