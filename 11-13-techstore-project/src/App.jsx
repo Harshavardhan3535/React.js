@@ -6,8 +6,14 @@ import "./App.css";
 
 function App() {
   const topRef = useRef(null);
+  const productsRef = useRef(null);
+
   function scrollToTop() {
     topRef.current.scrollIntoView({ behavior: "smooth" });
+  }
+
+  function scrollToProducts() {
+    productsRef.current.scrollIntoView({ behavior: "smooth" });
   }
 
   const allBrands = ["All", ...new Set(products.map(p => p.brand))];
@@ -29,7 +35,6 @@ function App() {
     localStorage.setItem("techstore-cart", JSON.stringify(cartItems));
   }, [cartItems]);
 
-  
   const [wishlist, setWishlist] = useState(() => {
     const savedWishlist = localStorage.getItem("techstore-wishlist");
     if (savedWishlist) {
@@ -42,15 +47,18 @@ function App() {
     }
     return [];
   });
-  
+
   useEffect(() => {
     localStorage.setItem("techstore-wishlist", JSON.stringify(wishlist));
   }, [wishlist]);
 
-  
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedBrand, setSelectedBrand] = useState("All");
   const [sortBy, setSortBy] = useState("");
+
+  // NEW: dropdown visibility state
+  const [showCart, setShowCart] = useState(false);
+  const [showProfile, setShowProfile] = useState(false);
 
   function addToCart(product) {
     const existingItem = cartItems.find(item => item.id === product.id);
@@ -65,6 +73,10 @@ function App() {
     }
   }
 
+  function removeFromCart(productId) {
+    setCartItems(cartItems.filter(item => item.id !== productId));
+  }
+
   const cartCount = cartItems.reduce((total, item) => total + item.quantity, 0);
   const cartTotal = cartItems.reduce((total, item) => total + item.price * item.quantity, 0);
 
@@ -76,14 +88,12 @@ function App() {
     }
   }
 
-  // Filter: search + brand
   let filteredProducts = products.filter(product => {
     const matchesSearch = product.name.toLowerCase().includes(searchTerm.toLowerCase());
     const matchesBrand = selectedBrand === "All" || product.brand === selectedBrand;
     return matchesSearch && matchesBrand;
   });
 
-  // Sort
   if (sortBy === "price-low") {
     filteredProducts = [...filteredProducts].sort((a, b) => a.price - b.price);
   } else if (sortBy === "price-high") {
@@ -101,16 +111,56 @@ function App() {
             TechStore
           </a>
           <ul className="nav-links">
-            <li><a href="#" className="nav-link">Products</a></li>
+            <li><a href="#" className="nav-link" onClick={(e) => { e.preventDefault(); scrollToProducts(); }}>Products</a></li>
             <li><a href="#" className="nav-link">Deals</a></li>
             <li><a href="#" className="nav-link">Support</a></li>
             <li><a href="#" className="nav-link">About</a></li>
           </ul>
           <div className="nav-actions">
-            <span>Cart: {cartCount} (₹{cartTotal})</span>
+            {/* Cart dropdown */}
+            <div className="dropdown-wrapper">
+              <button className="nav-btn cart-btn" onClick={() => { setShowCart(!showCart); setShowProfile(false); }}>
+                🛒 Cart: {cartCount} (₹{cartTotal})
+              </button>
+              {showCart && (
+                <div className="dropdown-panel">
+                  {cartItems.length === 0 ? (
+                    <p className="dropdown-empty">Your cart is empty</p>
+                  ) : (
+                    <>
+                      {cartItems.map(item => (
+                        <div key={item.id} className="cart-dropdown-item">
+                          <img src={item.image} alt={item.name} />
+                          <div className="cart-dropdown-info">
+                            <p>{item.name}</p>
+                            <span>Qty: {item.quantity} × ₹{item.price}</span>
+                          </div>
+                          <button className="remove-btn" onClick={() => removeFromCart(item.id)}>✕</button>
+                        </div>
+                      ))}
+                      <div className="cart-dropdown-total">Total: ₹{cartTotal}</div>
+                    </>
+                  )}
+                </div>
+              )}
+            </div>
+
             <button className="nav-btn">Sign In</button>
-            <button className="nav-btn primary">Shop Now</button>
-            <User userName="John Doe" />
+            <button className="nav-btn primary" onClick={scrollToProducts}>Shop Now</button>
+
+            {/* User profile dropdown */}
+            <div className="dropdown-wrapper">
+              <button className="nav-btn user-icon-btn" onClick={() => { setShowProfile(!showProfile); setShowCart(false); }}>
+                👤
+              </button>
+              {showProfile && (
+                <div className="dropdown-panel profile-panel">
+                  <User userName="John Doe" />
+                  <p className="profile-email">john.doe@email.com</p>
+                  <button className="nav-btn" style={{ width: "100%", marginTop: "8px" }}>Sign Out</button>
+                </div>
+              )}
+            </div>
           </div>
         </div>
       </nav>
@@ -129,7 +179,7 @@ function App() {
         </div>
       </section>
 
-      <section className="products-section" id="products">
+      <section className="products-section" id="products" ref={productsRef}>
         <div className="section-header">
           <h2 className="section-title">Best Sellers</h2>
           <input
