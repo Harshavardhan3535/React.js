@@ -56,7 +56,6 @@ function App() {
   const [selectedBrand, setSelectedBrand] = useState("All");
   const [sortBy, setSortBy] = useState("");
 
-  // NEW: dropdown visibility state
   const [showCart, setShowCart] = useState(false);
   const [showProfile, setShowProfile] = useState(false);
 
@@ -117,10 +116,9 @@ function App() {
             <li><a href="#" className="nav-link">About</a></li>
           </ul>
           <div className="nav-actions">
-            {/* Cart dropdown */}
             <div className="dropdown-wrapper">
               <button className="nav-btn cart-btn" onClick={() => { setShowCart(!showCart); setShowProfile(false); }}>
-                🛒 Cart: {cartCount} (₹{cartTotal})
+                🛒 Cart: {cartCount} (₹{cartTotal.toLocaleString()})
               </button>
               {showCart && (
                 <div className="dropdown-panel">
@@ -133,12 +131,12 @@ function App() {
                           <img src={item.image} alt={item.name} />
                           <div className="cart-dropdown-info">
                             <p>{item.name}</p>
-                            <span>Qty: {item.quantity} × ₹{item.price}</span>
+                            <span>Qty: {item.quantity} × ₹{item.price.toLocaleString()}</span>
                           </div>
                           <button className="remove-btn" onClick={() => removeFromCart(item.id)}>✕</button>
                         </div>
                       ))}
-                      <div className="cart-dropdown-total">Total: ₹{cartTotal}</div>
+                      <div className="cart-dropdown-total">Total: ₹{cartTotal.toLocaleString()}</div>
                     </>
                   )}
                 </div>
@@ -148,7 +146,6 @@ function App() {
             <button className="nav-btn">Sign In</button>
             <button className="nav-btn primary" onClick={scrollToProducts}>Shop Now</button>
 
-            {/* User profile dropdown */}
             <div className="dropdown-wrapper">
               <button className="nav-btn user-icon-btn" onClick={() => { setShowProfile(!showProfile); setShowCart(false); }}>
                 👤
@@ -205,6 +202,7 @@ function App() {
           {filteredProducts.map((product) => (
             <ProductCard
               key={product.id}
+              id={product.id}
               image={product.image}
               name={product.name}
               price={product.price}

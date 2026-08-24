@@ -33,8 +33,8 @@ export default function ProductCard({
           {isBestSeller && <span className="bestseller-tag">Best Seller</span>}
         </div>
         <div className="price-row">
-          <span className="price">₹ {price}</span>
-          {originalPrice && <span className="original-price">₹ {originalPrice}</span>}
+          <span className="price">₹ {price.toLocaleString()}</span>
+          {originalPrice && <span className="original-price">₹ {originalPrice.toLocaleString()}</span>}
         </div>
         <button className="add-btn" onClick={onAddToCart}>Add to Cart</button>
       </div>

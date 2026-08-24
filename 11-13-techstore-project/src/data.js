@@ -6,7 +6,7 @@ const products = [
     originalPrice: 199999,
     discount: "35% OFF",
     rating: 5.0,
-    image: "https://media-ik.croma.com/prod/https://media.tatacroma.com/Croma%20Assets/Computers%20Peripherals/Desktops/Images/311754_0_p4etiv.png",
+    image: "https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?w=400&h=400&fit=crop",
     isBestSeller: true,
     brand: "Apple"
   },
@@ -17,7 +17,7 @@ const products = [
     originalPrice: 149999,
     discount: "15% OFF",
     rating: 4.9,
-    image: "https://media-ik.croma.com/prod/https://media.tatacroma.com/Croma%20Assets/Communication/Mobiles/Images/317417_0_7ISiBcc4Y.png",
+    image: "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=400&h=400&fit=crop",
     isBestSeller: true,
     brand: "Apple"
   },
@@ -28,7 +28,7 @@ const products = [
     originalPrice: 89999,
     discount: "20% OFF",
     rating: 4.8,
-    image: "https://media-ik.croma.com/prod/https://media.tatacroma.com/Croma%20Assets/Computers%20Peripherals/Desktops/Images/311754_0_p4etiv.png",
+    image: "https://images.unsplash.com/photo-1610945415295-d9bbf067e59c?w=400&h=400&fit=crop",
     isBestSeller: true,
     brand: "Samsung"
   },
@@ -39,7 +39,7 @@ const products = [
     originalPrice: 109999,
     discount: "18% OFF",
     rating: 4.9,
-    image: "https://media.tatacroma.com/Croma%20Assets/Computers%20Peripherals/Tablets%20and%20iPads/Images/264226_fefcjf.png",
+    image: "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?w=400&h=400&fit=crop",
     isBestSeller: false,
     brand: "Apple"
   },
@@ -50,7 +50,7 @@ const products = [
     originalPrice: 74999,
     discount: "8% OFF",
     rating: 4.8,
-    image: "https://media.tatacroma.com/Croma%20Assets/Gaming/Gaming%20Consoles/Images/305985_ilpfe3.png",
+    image: "https://images.unsplash.com/photo-1606813907291-d86efa9b94db?w=400&h=400&fit=crop",
     isBestSeller: true,
     brand: "Sony"
   },
@@ -61,7 +61,7 @@ const products = [
     originalPrice: 64999,
     discount: "15% OFF",
     rating: 4.6,
-    image: "https://media.tatacroma.com/Croma%20Assets/Computers%20Peripherals/Tablets%20and%20iPads/Images/264226_fefcjf.png",
+    image: "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?w=400&h=400&fit=crop",
     isBestSeller: false,
     brand: "Samsung"
   },
@@ -72,7 +72,7 @@ const products = [
     originalPrice: 29999,
     discount: "17% OFF",
     rating: 4.9,
-    image: "https://media.tatacroma.com/Croma%20Assets/Computers%20Peripherals/Desktops/Images/311754_0_p4etiv.png",
+    image: "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=400&h=400&fit=crop",
     isBestSeller: true,
     brand: "Sony"
   },
@@ -83,18 +83,18 @@ const products = [
     originalPrice: 219999,
     discount: "14% OFF",
     rating: 4.7,
-    image: "https://media.tatacroma.com/Croma%20Assets/Computers%20Peripherals/Desktops/Images/311754_0_p4etiv.png",
+    image: "https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?w=400&h=400&fit=crop",
     isBestSeller: false,
     brand: "Dell"
   },
-    {
+  {
     id: 9,
     name: "OnePlus 12 5G, 256GB",
     price: 64999,
     originalPrice: 69999,
     discount: "7% OFF",
     rating: 4.7,
-    image: "https://media-ik.croma.com/prod/https://media.tatacroma.com/Croma%20Assets/Communication/Mobiles/Images/317417_0_7ISiBcc4Y.png",
+    image: "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=400&h=400&fit=crop",
     isBestSeller: false,
     brand: "OnePlus"
   },
@@ -105,7 +105,7 @@ const products = [
     originalPrice: 2999,
     discount: "56% OFF",
     rating: 4.3,
-    image: "https://media.tatacroma.com/Croma%20Assets/Computers%20Peripherals/Desktops/Images/311754_0_p4etiv.png",
+    image: "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=400&h=400&fit=crop",
     isBestSeller: true,
     brand: "boAt"
   },
@@ -116,7 +116,7 @@ const products = [
     originalPrice: 10999,
     discount: "18% OFF",
     rating: 4.8,
-    image: "https://media.tatacroma.com/Croma%20Assets/Computers%20Peripherals/Desktops/Images/311754_0_p4etiv.png",
+    image: "https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?w=400&h=400&fit=crop",
     isBestSeller: false,
     brand: "Logitech"
   },
@@ -127,7 +127,7 @@ const products = [
     originalPrice: 99999,
     discount: "20% OFF",
     rating: 4.6,
-    image: "https://media.tatacroma.com/Croma%20Assets/Computers%20Peripherals/Desktops/Images/311754_0_p4etiv.png",
+    image: "https://images.unsplash.com/photo-1593359677879-a4bb92f829d1?w=400&h=400&fit=crop",
     isBestSeller: false,
     brand: "Samsung"
   }
