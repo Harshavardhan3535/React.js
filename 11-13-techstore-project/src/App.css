@@ -413,6 +413,182 @@ body {
   font-size: 1.1rem;
 }
 
+/* ========== TAB BUTTONS ========== */
+.tab-buttons {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  margin: 24px 0 32px;
+}
+
+.tab-btn {
+  padding: 12px 32px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  color: var(--text-secondary);
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.tab-btn:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.tab-btn.active {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: white;
+  box-shadow: var(--shadow-glow);
+}
+
+/* ========== EMPTY WISHLIST ========== */
+.empty-wishlist {
+  text-align: center;
+  padding: 60px 20px;
+  grid-column: 1 / -1;
+}
+
+.empty-wishlist p {
+  font-size: 1.5rem;
+  color: var(--text-secondary);
+  margin-bottom: 24px;
+}
+
+.empty-wishlist .btn-primary {
+  display: inline-block;
+  padding: 14px 40px;
+  background: var(--accent);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.empty-wishlist .btn-primary:hover {
+  background: var(--accent-hover);
+  box-shadow: var(--shadow-glow);
+  transform: translateY(-2px);
+}
+
+/* ========== NAV WISHLIST LINK ========== */
+.nav-link .wishlist-count {
+  display: inline-block;
+  background: var(--accent);
+  color: white;
+  font-size: 0.7rem;
+  padding: 2px 8px;
+  border-radius: 50%;
+  margin-left: 4px;
+}
+
+/* ========== TAB BUTTONS ========== */
+.tab-buttons {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  margin: 24px 0 32px;
+}
+
+.tab-btn {
+  padding: 12px 32px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  color: var(--text-secondary);
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.tab-btn:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.tab-btn.active {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: white;
+  box-shadow: var(--shadow-glow);
+}
+
+/* ========== EMPTY WISHLIST ========== */
+.empty-wishlist {
+  text-align: center;
+  padding: 60px 20px;
+  grid-column: 1 / -1;
+}
+
+.empty-wishlist p {
+  font-size: 1.5rem;
+  color: var(--text-secondary);
+  margin-bottom: 24px;
+}
+
+.empty-wishlist .btn-primary {
+  display: inline-block;
+  padding: 14px 40px;
+  background: var(--accent);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.empty-wishlist .btn-primary:hover {
+  background: var(--accent-hover);
+  box-shadow: var(--shadow-glow);
+  transform: translateY(-2px);
+}
+
+/* ========== NAV WISHLIST COUNT BADGE ========== */
+.wishlist-count {
+  display: inline-block;
+  background: var(--accent);
+  color: white;
+  font-size: 0.7rem;
+  padding: 2px 8px;
+  border-radius: 50%;
+  margin-left: 4px;
+  font-weight: 700;
+}
+
+/* ========== SECTION HEADER STYLES ========== */
+.section-header {
+  text-align: center;
+  margin-bottom: 56px;
+}
+
+.section-header input,
+.section-header select {
+  padding: 12px 16px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: var(--bg-card);
+  color: var(--text-primary);
+  font-size: 0.9rem;
+  margin: 0 8px;
+  min-width: 150px;
+}
+
+.section-header input:focus,
+.section-header select:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px var(--accent-glow);
+}
+
 /* Product Grid */
 .product-grid {
   display: grid;
