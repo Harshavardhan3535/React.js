@@ -1,122 +1,72 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import heroImg from './assets/hero.png'
-import './App.css'
+import { useState } from 'react';
 
-function App() {
-  const [count, setCount] = useState(0)
+function SignupForm() {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    password: '',
+    confirmPassword: ''
+  });
+
+  const [errors, setErrors] = useState({});
+
+  function handleChange(e) {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+  }
+
+  function validate(data) {
+    const newErrors = {};
+    if (!data.name.trim()) newErrors.name = "Name is required";
+    if (!/\S+@\S+\.\S+/.test(data.email)) newErrors.email = "Email is invalid";
+    if (data.password.length < 6) newErrors.password = "Password must be at least 6 characters";
+    if (data.confirmPassword !== data.password) newErrors.confirmPassword = "Passwords don't match";
+    return newErrors;
+  }
+
+  function handleSubmit(e) {
+    e.preventDefault();
+    const validationErrors = validate(formData);
+    setErrors(validationErrors);
+
+    if (Object.keys(validationErrors).length === 0) {
+      console.log("Form is valid, submitting:", formData);
+      alert("Signup successful! Check the console for the submitted data.");
+    }
+  }
 
   return (
-    <>
-      <section id="center">
-        <div className="hero">
-          <img src={heroImg} className="base" width="170" height="179" alt="" />
-          <img src={reactLogo} className="framework" alt="React logo" />
-          <img src={viteLogo} className="vite" alt="Vite logo" />
+    <div style={{ maxWidth: "400px", margin: "50px auto", fontFamily: "sans-serif" }}>
+      <h1>Signup Form</h1>
+      <form onSubmit={handleSubmit}>
+        <div style={{ marginBottom: "12px" }}>
+          <input name="name" value={formData.name} onChange={handleChange} placeholder="Name" style={{ width: "100%", padding: "8px" }} />
+          {errors.name && <p style={{ color: "red", fontSize: "0.85rem" }}>{errors.name}</p>}
         </div>
-        <div>
-          <h1>Get started</h1>
-          <p>
-            Edit <code>src/App.jsx</code> and save to test <code>HMR</code>
-          </p>
-        </div>
-        <button
-          type="button"
-          className="counter"
-          onClick={() => setCount((count) => count + 1)}
-        >
-          Count is {count}
-        </button>
-      </section>
 
-      <div className="ticks"></div>
-
-      <section id="next-steps">
-        <div id="docs">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#documentation-icon"></use>
-          </svg>
-          <h2>Documentation</h2>
-          <p>Your questions, answered</p>
-          <ul>
-            <li>
-              <a href="https://vite.dev/" target="_blank">
-                <img className="logo" src={viteLogo} alt="" />
-                Explore Vite
-              </a>
-            </li>
-            <li>
-              <a href="https://react.dev/" target="_blank">
-                <img className="button-icon" src={reactLogo} alt="" />
-                Learn more
-              </a>
-            </li>
-          </ul>
+        <div style={{ marginBottom: "12px" }}>
+          <input name="email" value={formData.email} onChange={handleChange} placeholder="Email" style={{ width: "100%", padding: "8px" }} />
+          {errors.email && <p style={{ color: "red", fontSize: "0.85rem" }}>{errors.email}</p>}
         </div>
-        <div id="social">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#social-icon"></use>
-          </svg>
-          <h2>Connect with us</h2>
-          <p>Join the Vite community</p>
-          <ul>
-            <li>
-              <a href="https://github.com/vitejs/vite" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#github-icon"></use>
-                </svg>
-                GitHub
-              </a>
-            </li>
-            <li>
-              <a href="https://chat.vite.dev/" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#discord-icon"></use>
-                </svg>
-                Discord
-              </a>
-            </li>
-            <li>
-              <a href="https://x.com/vite_js" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#x-icon"></use>
-                </svg>
-                X.com
-              </a>
-            </li>
-            <li>
-              <a href="https://bsky.app/profile/vite.dev" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#bluesky-icon"></use>
-                </svg>
-                Bluesky
-              </a>
-            </li>
-          </ul>
-        </div>
-      </section>
 
-      <div className="ticks"></div>
-      <section id="spacer"></section>
-    </>
-  )
+        <div style={{ marginBottom: "12px" }}>
+          <input name="password" type="password" value={formData.password} onChange={handleChange} placeholder="Password" style={{ width: "100%", padding: "8px" }} />
+          {errors.password && <p style={{ color: "red", fontSize: "0.85rem" }}>{errors.password}</p>}
+        </div>
+
+        <div style={{ marginBottom: "12px" }}>
+          <input name="confirmPassword" type="password" value={formData.confirmPassword} onChange={handleChange} placeholder="Confirm Password" style={{ width: "100%", padding: "8px" }} />
+          {errors.confirmPassword && <p style={{ color: "red", fontSize: "0.85rem" }}>{errors.confirmPassword}</p>}
+        </div>
+
+        <button type="submit" style={{ width: "100%", padding: "10px" }}>Sign Up</button>
+      </form>
+    </div>
+  );
 }
 
-export default App
+function App() {
+  return <SignupForm />;
+}
+
+export default App;
